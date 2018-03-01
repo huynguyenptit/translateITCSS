@@ -22,7 +22,7 @@ Một trong những nguyên tắc chính của ITCSS là nó chia mã nguồn CS
 Những layer đó được thể hiện như sau:
 
 * __Setting__:được sử dụng với tiền xử lý và chứa font, định nghĩa màu sắc,...
-* __Tool__: tất cả đều được sử dụng mixin và function. Đưa ra bất kì CSS nào trong 2 layer đầu đều không quan trọng.
+* __Tool__: ~~tất cả đều được sử dụng mixin và function. Đưa ra bất kì CSS nào trong 2 layer đầu đều không quan trọng~~. ( globally used mixins and functions. It’s important not to output any CSS in the first 2 layers. - *các function và các mixin được sử dụng trong phạm vi global. Lưu ý quan trọng là không viết bất kỳ CSS vào 2 layer đầu tiên này.*) 
 * __Generic__: reset và(hoặc) bình thường hóa các style, định nghĩa các box-sizing. Nó là layer đầu tiên thực sự tạo ra CSS
 * __Elements__: Tạo kiểu cho các thành phần Html trống (như là H1,A,v.v..).
 Những thứ này đi kèm với những thiết kế mặc định của trình duyệt vì vậy chúng ra có thể thiết kế lại chúng ở đây.
@@ -41,13 +41,16 @@ Tổ chức CSS như vậy sẽ giúp bạn tránh Specificity Wars và nó đ�
 ##Documentation
 Cập nhật ngày 27/10/2016: báo mạng đã vừa cho tái bản nguyên bản từ bản in (xem mã nguồn phía dưới).  
 Thông thường, ở điểm này tôi sẽ bảo bạn tới [trang web ITCSS](https://itcss.io/) để học thêm nữa. Tuy nhiên, không tồn
-tại tài liệu mã nguồn mở nào cả.  
+tại tài liệu mã nguồn mở nào cả.
+  
 ITCSS vẫn còn bản quyền một phần, và nếu bạn muốn sử dụng đầy đủ nó, bạn nên học phần giới thiệu nguyên trên báo mạng.
 Tôi không ở đây để phán xét những ý tưởng của tác giả (tôi cảm ơn đến anh ấy vì những hiểu biết mà anh ấy chia sẻ), nhưng
-tôi nghĩ nó sẽ ngăn cản ITCSS rộng hơn (điều mà có thể là chủ ý, sau tất cả).  
-"Những kí tự độc quyền một phần của ITCSS ngăn chặn nó mở rộng".  
+tôi nghĩ nó sẽ ngăn cản ITCSS rộng hơn (điều mà có thể là chủ ý, sau tất cả).
+  
+"Những kí tự độc quyền một phần của ITCSS ngăn chặn nó mở rộng".
+
 Nó sẽ không ngăn cản bạn từ lúc bắt đầu sử dụng nó trong dự án của bạn, tuy nhiên, nếu bạn thực sự thấy thích thú khi
-làm như vậy. [Thấy được các vấn đề](https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/) của báo mạng
+làm như vậy. [~~Thấy được các vấn đề~~(Get that particular issue*Truy cập bài viết*)](https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/) của báo mạng
 để học về ITCSS cơ bản, và học từ các nguồn online có sẵn, và các ví dụ sẽ giúp bạn với sự mở rộng của nó trong các dự
 án thực tế.  
 ## Mã nguồn
@@ -72,7 +75,7 @@ năng nâng cao
 Bạn cũng có thể kiểm tra [Chisel](https://github.com/xfiveco/generator-chisel/), bộ sinh Yeoman cho front-end và dự án WordPress,
 những thức hỗ trợ ITCSS
 ##Kinh nghiệm
-Ở đây là một vài ý kiển cơ bạn dựa trên kinh nghiệm của tôi qua các dự án ITCSS
+Ở đây là một vài ý kiển cơ bản dựa trên kinh nghiệm của tôi qua các dự án ITCSS
 ###Nghĩ ít hơn trong việc đặt tên hay vị trí mẫu
 Các quy định tự nhiên của ITCSS, đặc biệt khi kết hợp với [Quy ước đặt tên cho BEMIT](http://www.jamesturneronline.net/blog/bemit-naming-convention.html) 
 cho phép bạn tập trung hơn vào việc giải quyết những thách thức của font-end hơn là nghĩ tên hay vị trí mẫu. Đây là những
@@ -158,9 +161,9 @@ và tự động tải các định dạng mới tại [Chisel](https://github.c
 Đối tượng của ITCSS là những ứng viên hoàn hảo cho việc xây dựng thư viện về những thành phần tái sử dụng được cho phép
 phát triển font-end nhanh. Phần UI bao gồm những đối tượng chung và những thành phần cụ thể của dự án. Ví dụ như unnuitcss
 như một ITCSS framework cơ bản chứa một nhánh của đối tượng, nhưng chỉ một đối tượng mẫu.
-###Hoạt hình
-Tôi nhắc bạn nên định nghĩa chung, toàn cầu như các đối tượng, ví dụ:  *@keyframes o-fade-in* trong tệp *_objects.animations.scss*  
-Những hoạt hình cấu tạo đặc biệt nên được định nghĩa trong các file có cấu tạo tương ứng, ví dụ *@keyframes c-hero-scale*
+~~###Hoạt hình~~(Animation - *Hiệu ứng*)
+~~Tôi nhắc bạn nên định nghĩa chung, toàn cầu như các đối tượng~~(I recommend defining generic, global animations as objects too - *Tôi khuyến khích nên khai báo các hiệu ứng dùng chung và toàn cục giống như các object*), ví dụ:  *@keyframes o-fade-in* trong tệp *_objects.animations.scss*  
+~~Những hoạt hình cấu tạo đặc biệt nên được định nghĩa trong các file có cấu tạo tương ứng~~(Component specific animations should be defined in respective components files - *Các hiệu ứng cho các component cụ thể nào đó nên được định nghĩa trong các file component tương ứng,*), ví dụ *@keyframes c-hero-scale*
 trong * _components.hero.scss*
 ### Tính mềm dẻo
 ITCSS khá mềm dẻo trong quan hệ của công việc của bạn với công cụ. Một trong những nhà phát triển của chúng tôi đã bày tỏ
