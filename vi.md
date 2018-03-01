@@ -1,4 +1,4 @@
-##Làm sao để tôi có thể viết CSS dễ mở rộng và bảo trì? Đó là mối quan ngại của mọi Front-end. ITCSS sẽ trả lời cho bạn.
+# Làm sao để tôi có thể viết CSS dễ mở rộng và bảo trì? Đó là mối quan ngại của mọi Front-end. ITCSS sẽ trả lời cho bạn.
 
 Năm ngoái khi chúng tôi bắt đầu kế hoạch thiết kế lại[HEROized](http://www.heroized.com/) và làm mới website Xfive.co,
 tôi đã mong muốn cấu trúc của CSS cho phép dễ dàng trong việc phát triển và xa hơn là bảo trì.
