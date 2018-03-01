@@ -34,7 +34,7 @@ của chúng ta thường chứa Objects và Components.
 đi lớp trợ giúp.
 
 Tam giác cũng hiển thị cách trình bày mẫu bằng các bộ chọn được sắp xếp trong kết quả CSS: từ các kiểu mẫu chung tới từng
-cái cụ thể, từ những bộ chọn có tính cụ thể thấp tới từng cái cụ thể hơn (nhưng vẫn *không quá* cụ thể, những ID không
+cái cụ thể, từ những bộ chọn có tính cụ thể thấp tới từng cái cụ thể cao hơn (nhưng vẫn *không quá* cụ thể, những ID không
 được cho phép) và từ những cái xa đến cái gần.  
 ![reach](https://www.xfivecdn.com/xfive/wp-content/uploads/2016/02/10154630/itcss-key-metrics.svg)  
 Tổ chức CSS như vậy sẽ giúp bạn tránh Specificity Wars và nó đại diên bởi một [biểu đồ đặc trưng khỏe mạnh](https://jonassebastianohlsson.com/specificity-graph/)  
